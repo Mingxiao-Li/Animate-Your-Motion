@@ -16,6 +16,18 @@ In recent years, diffusion models have made remarkable strides in text-to-video 
 - [ ] Release training code
 - [ ] Train the model on larger/better dataset
 
+## Generated Videos
+<p align="center">
+  <img src="gifs/car.gif" width="30%" />
+  <img src="gifs/bird.gif" width="30%" />
+  <img src="gifs/bo.gif" width="30%" />
+</p>
+<p align="center">
+  <img src="gifs/car2.gif" width="30%" />
+  <img src="gifs/flyer.gif" width="30%" />
+  <img src="gifs/geeko.gif" width="30%" />
+</p>
+
 
 
 
