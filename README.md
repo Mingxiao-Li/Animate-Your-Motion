@@ -11,6 +11,12 @@ In recent years, diffusion models have made remarkable strides in text-to-video 
 ## Illustration of Our Method
 ![flowchar-img](images/model.png)
 
+## TODO
+- [ ] Release inference code and pretrained weights
+- [ ] Release training code
+- [ ] Train the model on larger/better dataset
+
+
 
 
 
