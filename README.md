@@ -14,7 +14,9 @@ In recent years, diffusion models have made remarkable strides in text-to-video 
 
 ## Illustration of Our Method
 ![flowchar-img](images/model.png)
+Illustration of our proposed model: Designed for conditional video generation, our model can handle three control signals including images, bounding box sequences, and text. It builds on a pre-trained text-to-video framework, enriched with an object-gated self-attention layer, image-gated cross-attention layer, and a zero initialized input convolution layer. These enhancements allow it to adapt to bounding box and image conditions through a two-stage training process: first focusing on the object-gated self-attention, followed by the input convolution and image-gated cross-attention layers.
 
+  
 ## TODO
 - [ ] Release inference code and pretrained weights
 - [ ] Release training code
