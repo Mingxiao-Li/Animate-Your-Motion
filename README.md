@@ -28,6 +28,13 @@ In recent years, diffusion models have made remarkable strides in text-to-video 
   <img src="gifs/geeko.gif" width="30%" />
 </p>
 
+<p align="center">
+  <img src="gifs/helico.gif" width="30%" />
+  <img src="gifs/hyrax.gif" width="30%" />
+  <img src="gifs/sur.gif" width="30%" />
+</p>
+
+
 
 
 
