@@ -1,5 +1,5 @@
 # Animate Your Motion: Turning Still Images into Dynamic Videos
-This repo contains the official implementation for the paper Animate Your Motion: Turning Still Images into Dynamic Videos  
+This repo contains the official implementation for the paper [Animate Your Motion: Turning Still Images into Dynamic Videos](https://mingxiao-li.github.io/smcd/)  
 by [Mingxiao Li*](https://scholar.google.com/citations?user=0t2f7joAAAAJ&hl=en), [Bo Wan*](https://bobwan.w3spaces.com/), Marie-Francine Moens, and Tinne Tuytelaars
 
 
