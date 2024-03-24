@@ -40,7 +40,15 @@ Illustration of our proposed model: Designed for conditional video generation, o
   <img src="gifs/sur.gif" width="30%" />
 </p>
 
-
+## Citation
+If you find our work useful, please feel free to cite by
+```
+@article{li2024animate,
+  title={Animate Your Motion: Turning Still Images into Dynamic Videos},
+  author={Li, Mingxiao and Wan, Bo and Moens, Marie-Francine and Tuytelaars, Tinne},
+  journal={arXiv preprint arXiv:2403.10179},
+  year={2024}
+}
 
 
 
