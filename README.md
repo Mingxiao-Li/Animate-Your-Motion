@@ -18,7 +18,7 @@ Illustration of our proposed model: Designed for conditional video generation, o
 
   
 ## TODO
-- [ ] Release inference code and pretrained weights
+- [x] Release inference code and pretrained weights
 - [ ] Release training code
 - [ ] Train the model on larger/better dataset
 
@@ -39,6 +39,41 @@ Illustration of our proposed model: Designed for conditional video generation, o
   <img src="gifs/hyrax.gif" width="30%" />
   <img src="gifs/sur.gif" width="30%" />
 </p>
+
+## Installation
+```
+git clone https://github.com/Mingxiao-Li/Animate-Your-Motion   
+cd Animate-Your-Motion   
+conda env create -f environment.yaml
+```
+
+## Running evaluation on got10k/youvis
+```
+accelerate launch inference_eval.py \
+--config ./configs/object_tracking_eval.yaml \
+--video_length 8 \
+--train_grounding vanilla_cross_vision \
+--trained_ckpt_path # path of pretrained weights \
+--cross_vision \
+--dataset #dataset (eg youvis, got10k) \
+--output_dir # path to save results \
+--batch_size 1 \
+--cat_init \
+```
+
+## Running inference with customized image and box sequence
+```
+accelerate launch inference_customize.py \
+--config ./configs/customize_infer.yaml \
+--video_length 8 \
+--train_grounding vanilla_cross_vision \
+--trained_ckpt_path # path of pretrained weights \
+--cross_vision \
+--output_dir # path to save your result \
+--cat_init \
+--prompt # prompt \
+--input_data_path # folder contains your image and box sequence (.txt)
+```
 
 ## Citation
 If you find our work useful, please feel free to cite by
