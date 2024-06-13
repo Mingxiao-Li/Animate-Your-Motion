@@ -1,0 +1,19 @@
+pretrained_model_path: "./stable-diffusion-v1-4"
+root_path: "/staging/leuven/stg_00116/modelscope/text-to-video"
+
+train_data:
+  name: object_tracking
+  path: "/data/leuven/333/vsc33366/projects/Diffusion-Video/dataset"
+  datasets:
+    - "got10k"
+    - "youvis"
+  n_sample_frames: 8 
+  width: 256
+  height: 256
+  split: "train"
+  num_max_obj: 8
+
+
+seed: 33
+mixed_precision: fp16
+enable_xformers_memory_efficient_attention: True
