@@ -22,6 +22,10 @@ Illustration of our proposed model: Designed for conditional video generation, o
 - [ ] Release training code
 - [ ] Train the model on larger/better dataset
 
+
+## Pretrained Weights
+- [Model](https://huggingface.co/Lixiaoming/Animate-Your-Motion)  (batch size 16, 60000 steps)
+
 ## Generated Videos
 <p align="center">
   <img src="gifs/car.gif" width="30%" />
