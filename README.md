@@ -44,12 +44,75 @@ Illustration of our proposed model: Designed for conditional video generation, o
   <img src="gifs/sur.gif" width="30%" />
 </p>
 
+# Getting Started
+
 ## Installation
 ```
 git clone https://github.com/Mingxiao-Li/Animate-Your-Motion   
 cd Animate-Your-Motion   
 conda env create -f environment.yaml
 ```
+
+## Data Preparation
+
+### Stage 2
+We use Youvis and GOT-10K dataset to train our model.   
+Please download both dataset from the official website. [YouTube-VIS2021](https://youtube-vos.org/dataset/vis/),
+[GOT-10K](http://got-10k.aitestunion.com/)   
+For youvis dataset, we use the caption generated in [TrackDiff](https://github.com/pixeli99/TrackDiffusion)
+
+Dataset folder structure (All the generated data can be downloaded via this [Link](https://huggingface.co/Lixiaoming/Animate-Your-Motion/tree/main) )
+```
+├── dataset
+│   ├── youvis
+│   │   │── caption.json (generated text caption)
+│   │   │── train
+│   │   │   │── JPEGImages
+│   │   │   │── instances.json (the official annotation files)
+│   │   │   │── annotations_info.json (our generated files)
+│   │   │   │── annotations_info_with_cat_emb.json (our generated files)
+│   │   │   │── ......
+│   │   │── valid
+│   │   │   │── JPEGImages
+│   │   │   │── instances.json (the official annotation files)
+│   │   │   │── ......
+│   │   │── test
+│   │   │   │── JPEGImages
+│   │   │   │── instances.json (the official annotation files)
+│   │   │   │── ......
+│   │   │── annotations (the converted annotation file)
+|   |── got10k
+|   |   |── got10k_val_caption.json
+|   |   |── obj_embedding.json
+|   |   |── train
+|   |   |   |── GOT-10k_Train_00001 (contains all image in this video)
+|   |   |   |── ......
+|   |   |── val
+|   |   |   |── GOT-10k_Val_00001 (contains all image in this video)
+|   |   |   |── ......
+|   |   |── test
+|   |   |   |── GOT-10k_Test_00001 (contains all image in this video)
+|   |   |   |── ......
+```
+## Training model
+### Stage 1
+```
+In preparation 
+```
+### Stage 2
+```
+accelerate launch  ms_main.py \
+--config "./configs/object_tracking_ms_stage2.yaml" \
+--train_batch_size 4 \
+--output_dir  path to save ckpt\
+--gradient_accumulation_steps 4 \
+--train_grounding vanilla_cross_vision \
+--use_img_free_guidance  \
+--cross_vision \
+--cat_init \
+--tune_from_ckpt_path  model to tune from \
+```
+
 
 ## Running evaluation on got10k/youvis
 ```
