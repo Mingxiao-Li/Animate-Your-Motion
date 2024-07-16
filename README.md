@@ -54,7 +54,8 @@ conda env create -f environment.yaml
 ```
 
 ## Data Preparation
-
+### Stage 1
+In preparation
 ### Stage 2
 We use Youvis and GOT-10K dataset to train our model.   
 Please download both dataset from the official website. [YouTube-VIS2021](https://youtube-vos.org/dataset/vis/),
