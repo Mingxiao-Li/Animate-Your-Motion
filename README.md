@@ -1,5 +1,5 @@
-# Animate Your Motion: Turning Still Images into Dynamic Videos
-This repo contains the official implementation for the paper [Animate Your Motion: Turning Still Images into Dynamic Videos](https://mingxiao-li.github.io/smcd/)  
+# [ECCV-24] Animate Your Motion: Turning Still Images into Dynamic Videos
+This repo contains the official implementation for the ECCV paper [Animate Your Motion: Turning Still Images into Dynamic Videos](https://mingxiao-li.github.io/smcd/)  
 by [Mingxiao Li*](https://scholar.google.com/citations?user=0t2f7joAAAAJ&hl=en), [Bo Wan*](https://bobwan.w3spaces.com/), Marie-Francine Moens, and Tinne Tuytelaars
 
 
@@ -149,7 +149,7 @@ If you find our work useful, please feel free to cite by
 @article{li2024animate,
   title={Animate Your Motion: Turning Still Images into Dynamic Videos},
   author={Li, Mingxiao and Wan, Bo and Moens, Marie-Francine and Tuytelaars, Tinne},
-  journal={arXiv preprint arXiv:2403.10179},
+  journal={European Conference on Computer Vision },
   year={2024}
 }
 
