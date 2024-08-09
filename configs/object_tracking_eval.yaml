@@ -16,3 +16,6 @@ eval_data:
 seed: 33
 mixed_precision: fp16
 enable_xformers_memory_efficient_attention: True
+
+
+# the root path refers to the pretrained model-scope text to video folder , you can download it from https://huggingface.co/ali-vilab/modelscope-damo-text-to-video-synthesis/tree/main
