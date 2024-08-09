@@ -1,39 +1,21 @@
 import argparse
-import datetime
 import logging
-import inspect
-import itertools
-import math
 import os
-from typing import Dict, Optional, Tuple
+from typing import Dict, Optional
 from omegaconf import OmegaConf
-from torchvision.transforms import ToPILImage
 import torch
 import torch.utils.checkpoint
 import diffusers
 import transformers
-import random 
-import numpy as np 
-import inference_utils
-import copy 
 from accelerate import Accelerator
 from accelerate.logging import get_logger
 from accelerate.utils import set_seed
-from data.gligen_dataset.concat_dataset import ConCatDataset
 from diffusers.utils import check_min_version
 from diffusers.utils.import_utils import is_xformers_available
-from tqdm.auto import tqdm
-from trackers import MyWandbTracker
-from torchvision import transforms
-from PIL import Image, ImageDraw
-# from transformers import CLIPTokenizer
-from text_grounding_input import GroundingNetInput
 from modelscope_t2v.ms_pipeline import MSVideoGenerationPipeline
-from train import Trainer
 from modelscope_t2v.text_to_video_synthesis_model import get_model_scope_t2v_models
 from util import save_videos_grid,draw_boxes,visual_img
-from data.concate_dataset import CatObjTrackVideoDataset, collate_fn
-from tqdm import tqdm 
+from data.concate_dataset import CatObjTrackVideoDataset
 # Will error if the minimal version of diffusers is not installed. Remove at your own risks.
 check_min_version("0.10.0.dev0")
 logger = get_logger(__name__, log_level="INFO")
@@ -104,6 +86,7 @@ def main(
     )
     
     if trained_ckpt_path is not None:
+        import ipdb;ipdb.set_trace()
         weights = torch.load(os.path.join(trained_ckpt_path,"pytorch_model.bin"))
         missing_keys, unexpected_keys = unet.load_state_dict(weights, strict=False)
         print("********************************")
