@@ -7,31 +7,25 @@ import math
 import os
 from typing import Dict, Optional, Tuple
 from omegaconf import OmegaConf
-from torchvision.transforms import ToPILImage
 import torch
 import torch.utils.checkpoint
 import diffusers
 import transformers
 import random 
 import numpy as np 
-import inference_utils
 from accelerate import Accelerator
 from accelerate.logging import get_logger
 from accelerate.utils import set_seed
 from data.gligen_dataset.concat_dataset import ConCatDataset
-from diffusers import DDPMScheduler, DDIMScheduler
-from diffusers.optimization import get_scheduler
 from diffusers.utils import check_min_version
 from diffusers.utils.import_utils import is_xformers_available
 from tqdm.auto import tqdm
-from trackers import MyWandbTracker
 from torchvision import transforms
 from PIL import Image, ImageDraw
 from collections import OrderedDict
 # from transformers import CLIPTokenizer
 from text_grounding_input import GroundingNetInput
 from modelscope_t2v.ms_pipeline import MSVideoGenerationPipeline
-from train import Trainer
 from modelscope_t2v.text_to_video_synthesis_model import get_model_scope_t2v_models
 from util import save_videos_grid, draw_boxes
 from data.concate_dataset import CatObjTrackVideoDataset, collate_fn
