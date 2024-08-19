@@ -1,0 +1,6 @@
+pretrained_model_path: "./stable-diffusion-v1-4"
+root_path: "/staging/leuven/stg_00116/modelscope/text-to-video"
+
+seed: 33
+mixed_precision: fp16
+enable_xformers_memory_efficient_attention: True
