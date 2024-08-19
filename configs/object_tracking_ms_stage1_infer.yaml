@@ -1,0 +1,41 @@
+pretrained_model_path: "./stable-diffusion-v1-4"
+root_path: "./modelscope/text-to-video"
+
+train_data:
+  name: gligen
+  data_path: "./dataset/GLIGEN"
+  dataset_names:
+    FlickrGrounding:
+      which_layer_text: before
+      image_size: 256
+      max_boxes_per_data: 30
+      prob_use_caption: 1.0
+      random_crop: False
+      random_flip: False
+      cat_input: True
+      crop_ratio: 0.95
+      pretrained_model_path: "./stable-diffusion-v1-4"
+    SBUGrounding:
+      which_layer_text: before
+      image_size: 256
+      max_boxes_per_data: 30
+      prob_use_caption: 1.0
+      random_crop: False
+      random_flip: False
+      cat_input: True
+      crop_ratio: 0.95
+      pretrained_model_path: "./stable-diffusion-v1-4"
+    VGGrounding:
+      which_layer_text: before
+      image_size: 256
+      max_boxes_per_data: 30
+      prob_use_caption: 1.0
+      random_crop: False
+      random_flip: False
+      cat_input: True
+      crop_ratio: 0.95
+      pretrained_model_path: "./stable-diffusion-v1-4"
+
+seed: 33
+mixed_precision: fp16
+enable_xformers_memory_efficient_attention: True

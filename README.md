@@ -55,7 +55,31 @@ conda env create -f environment.yaml
 
 ## Data Preparation
 ### Stage 1
-In preparation
+Following [GLIGEN](https://github.com/gligen/GLIGEN/), 
+we use image dataset to train MIM module 
+(Object Gated Self-Attention Layer).
+
+Please download
+[Bounding boxes grounding dataset](https://github.com/gligen/GLIGEN/tree/master/DATA#bounding-boxes-grounding)
+from GLIGEN.
+Using only Flickr+SBU+GQA datasets is sufficient for training MIM 
+(Feel free to use more for your customized training).
+
+Dataset folder structure:
+```
+├── dataset
+│   ├── GLIGEN
+│   │   ├── GROUNDING
+│   │   │   │── flickr
+│   │   │   │   │── train-00.lineidx
+│   │   │   │   │── train-00.tsv
+│   │   │   │── sbu
+│   │   │   │   │── train-00.lineidx
+│   │   │   │   │── train-00.tsv
+│   │   │   │── gqa
+│   │   │   │   │── train-00.lineidx
+│   │   │   │   │── train-00.tsv
+```
 ### Stage 2
 We use Youvis and GOT-10K dataset to train our model.   
 Please download both dataset from the official website. [YouTube-VIS2021](https://youtube-vos.org/dataset/vis/),
@@ -98,7 +122,14 @@ Dataset folder structure (All the generated data can be downloaded via this [Lin
 ## Training model
 ### Stage 1
 ```
-In preparation 
+accelerate launch ms_main.py \
+--config "./configs/object_tracking_ms_stage1.yaml" \
+--train_batch_size 64 \
+--output_dir ./outputs/gligen-model_scope \
+--gradient_accumulation_steps 1 \
+--train_grounding "vanilla" \
+--use_image_dataset \
+--use_wandb
 ```
 ### Stage 2
 ```

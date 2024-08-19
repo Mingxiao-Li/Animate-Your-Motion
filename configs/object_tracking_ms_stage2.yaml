@@ -1,10 +1,10 @@
 pretrained_model_path: "./stable-diffusion-v1-4"
 output_dir: "./outputs/gligen-model_scope"
-root_path: "/staging/leuven/stg_00116/modelscope/text-to-video"
+root_path: "./modelscope/text-to-video"
 
 train_data:
   name: object_tracking
-  path: "/data/leuven/333/vsc33366/projects/Diffusion-Video/dataset"
+  path: "./dataset"
   datasets:
     - "got10k"
     - "youvis"
