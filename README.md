@@ -19,7 +19,7 @@ Illustration of our proposed model: Designed for conditional video generation, o
   
 ## TODO
 - [x] Release inference code and pretrained weights
-- [ ] Release training code
+- [x] Release training code
 - [ ] Train the model on larger/better dataset
 
 
