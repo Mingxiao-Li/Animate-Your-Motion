@@ -86,11 +86,11 @@ Please download both dataset from the official website. [YouTube-VIS2021](https:
 [GOT-10K](http://got-10k.aitestunion.com/)   
 For youvis dataset, we use the caption generated in [TrackDiff](https://github.com/pixeli99/TrackDiffusion)
 
-Dataset folder structure (All the generated data can be downloaded via this [Link](https://huggingface.co/Lixiaoming/Animate-Your-Motion/tree/main) )
+Dataset folder structure (All the generated data can be downloaded via this [Link](https://huggingface.co/Lixiaoming/Animate-Your-Motion/tree/main) ), or generated using preprocess_data.py, and place them in the floder of data_path/split.
 ```
 ├── dataset
 │   ├── youvis
-│   │   │── caption.json (generated text caption)
+│   │   │── caption.json (generated text caption).
 │   │   │── train
 │   │   │   │── JPEGImages
 │   │   │   │── instances.json (the official annotation files)
