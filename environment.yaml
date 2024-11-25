@@ -250,4 +250,4 @@ dependencies:
       - yapf==0.40.2
       - yarl==1.9.2
       - zipp==3.17.0
-prefix: /data/leuven/333/vsc33366/miniconda3/envs/video
+
